@@ -1,20 +1,10 @@
+// best approach for this question
 class Solution {
     public int strStr(String haystack, String needle) {
-        if (needle.isEmpty()) {
-            return 0; // If needle is an empty string
+        if(haystack.indexOf(needle) != -1){
+            return haystack.indexOf(needle);
         }
-
-        for (int i = 0; i <= haystack.length() - needle.length(); i++) {
-            for (int j = 0; j < needle.length(); j++) {
-                if (haystack.charAt(i+j) != needle.charAt(j)) {
-                    break; // Mismatch found, break inner loop
-                }
-                if (j == needle.length() - 1) {
-                    return i; // Found needle in haystack
-                }
-            }
-        }
-        return -1; // Needle not found
+        return -1;
     }
 }
 
