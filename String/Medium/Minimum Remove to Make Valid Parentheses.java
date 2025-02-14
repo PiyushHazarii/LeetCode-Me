@@ -3,6 +3,8 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         int openCount = 0;
         
+        // iterate from left to right and count the extra open bracket and 
+        // skip the extra close bracket
         for (char c : s.toCharArray()) {
             if (c == '(') {
                 openCount++;
@@ -13,7 +15,7 @@ class Solution {
             sb.append(c);
         }
         
-        // Second pass: Remove extra opening parentheses '(' from the end
+        // iterate from right to left in sb to skip the extra open bracket
         StringBuilder result = new StringBuilder();
         int openToKeep = openCount; // Extra '(' to be removed
         

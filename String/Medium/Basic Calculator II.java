@@ -13,6 +13,11 @@ class Solution {
                     val = val*10 +(s.charAt(i)-'0');
                     i++;
                 }
+                // ye hum eassi liye kr rahe hai kyuki i++ ho chuka hai ek zyda 
+                // eassi hum usko ghata rahe hai eg 123+5 hai to i =0 mein loop mein
+                // enter hoga then 2 baar chalega to  3 ho jayega to  baad to for loop
+                // usko aur ek bhada dega to + ya - skip ho jayega essiliye i--
+                // kar rahe hai
                 i--;
                 if(sign == '+')
                     st.push(val);
