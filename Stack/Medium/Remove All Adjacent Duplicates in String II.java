@@ -14,7 +14,8 @@ class Solution {
         
         StringBuilder st = new StringBuilder();
 
-        for(Pairs pair : stack)
+        // itne baar repeat krna padega jitne baar stack mei hai
+            for(Pairs pair : stack)
             st.append(String.valueOf(pair.character).repeat(pair.count));
         return st.toString();
     }
